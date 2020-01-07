@@ -1,9 +1,16 @@
+@font-face {
+  font-family: 'Colaborate' !important;
+  font-style: normal;
+  font-weight: 400;
+  src: url("src/fonts/ColabBol.otf") format("otf"), url("src/fonts/ColabLig.otf") format("otf"), url("src/fonts/ColabMed.otf") format("otf"), url("src/fonts/ColabReg.otf") format("otf"), url("src/fonts/ColabThi.otf") format("otf");
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Colaborate' !important;
 }
 
 nav {
@@ -179,5 +186,70 @@ nav {
 
 /**
  * Front Page Template
+ * Template display: flexbox
  */
+.frontpage__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+.frontpage__body--width {
+  padding: 10px;
+  background: green;
+  width: 80%;
+}
+
+.frontpage__body--left {
+  background: red;
+  width: 10%;
+}
+
+.frontpage__body--rigth {
+  background: rebeccapurple;
+  width: 10%;
+}
+
+.frontpage__free-service {
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.frontpage__free-service__education {
+  background: yellow;
+  height: 350px;
+  width: 350px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.frontpage__free-service__education--image img {
+  height: 306.65px;
+  width: 300.702px;
+}
+
+.frontpage__free-service__education--description {
+  color: 0;
+}
 /*# sourceMappingURL=main.css.map */
