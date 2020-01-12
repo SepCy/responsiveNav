@@ -16,7 +16,8 @@ body {
 }
 
 nav {
-  position: relative;
+  position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   align-items: center;
@@ -24,6 +25,7 @@ nav {
   background: url("/img/header-1.svg") no-repeat fixed;
   height: 20vh;
   min-height: 18px;
+  z-index: 5;
 }
 
 .navlinks {
@@ -156,20 +158,19 @@ nav {
 // Navigation under navlinks
 
 .navigation {
+  position: absolute;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80px;
+  top: 65px;
 
   .box {
-    width: 100%;
-    top: -71px;
-    position: relative;
-    margin-left: 20px;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background-color: #000000;
-    padding-left: 10px;
+    margin-left: 15px;
   }
 }
 
@@ -177,9 +178,9 @@ nav {
 
 .svg {
     position: relative;
-    margin-top: -50px;
+    margin-top: 5px;
     width: 100%;
-    height: 45%;
+    height: 65%;
     background: url('/img/wave\ \(2\).svg') no-repeat center;
     background-size: cover;
     z-index: -1;
@@ -221,6 +222,13 @@ nav {
     margin-top: -8px;
   }
 
+  // .navigation {
+
+  //   .box {
+  //     top: -50px;
+  //   }
+  // }
+
 }
 
 @media screen and (max-width: 980px) {
@@ -243,6 +251,11 @@ nav {
     background: white;
     height: 8vh;
   }
+}
+
+.navigation {
+
+  // margin-top: 0;
 }
 
 @media screen and (max-width: 800px) {
