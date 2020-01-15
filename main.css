@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'Colaborate' !important;
+  font-family: "Colaborate" !important;
   font-style: normal;
   font-weight: 400;
   src: url("src/fonts/ColabBol.otf") format("otf"), url("src/fonts/ColabLig.otf") format("otf"), url("src/fonts/ColabMed.otf") format("otf"), url("src/fonts/ColabReg.otf") format("otf"), url("src/fonts/ColabThi.otf") format("otf");
@@ -10,7 +10,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Colaborate' !important;
+  font-family: "Colaborate" !important;
 }
 
 body {
@@ -196,10 +196,9 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 80px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   top: 65px;
 }
 
@@ -402,6 +401,16 @@ nav {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .navigation {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .navigation .box {
+    margin: 0;
+  }
+}
+
 /**
  * Front Page Template
  * Template display: flexbox
@@ -414,12 +423,13 @@ nav {
       justify-content: space-around;
   padding: 0;
   margin: 0;
+  top: 50%;
+  position: absolute;
 }
 
 .frontpage__body--width {
   padding: 10px;
   background: green;
-  width: 80%;
 }
 
 .frontpage__body--left {
@@ -433,23 +443,18 @@ nav {
 }
 
 .frontpage__free-service {
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background: #000000;
 }
 
 .frontpage__free-service__education {
-  background: yellow;
-  height: 350px;
-  width: 350px;
-  margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,14 +465,25 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: blue;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0 10px 10px 10px;
+  left: 50%;
+  min-width: 250px;
+  max-width: 250px;
 }
 
 .frontpage__free-service__education--image img {
-  height: 306.65px;
-  width: 300.702px;
+  width: 200px;
 }
 
-.frontpage__free-service__education--description {
-  color: 0;
+@media screen and (max-width: 800px) {
+  .frontpage__free-service {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 /*# sourceMappingURL=main.css.map */
